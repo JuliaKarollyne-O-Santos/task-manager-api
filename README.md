@@ -57,6 +57,7 @@ Exemplo de corpo para criar uma tarefa:
 
 ## Integrantes
 
-- Nome Completo 1
-- Nome Completo 2
-- Nome Completo 3
+- Julia Karollyne de Oliveira dos Santos
+- Ana Clara Santos Perira
+- Cauã Mendrot Sant'Anna
+- Daniel do Prado Bettin
