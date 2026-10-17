@@ -38,4 +38,11 @@ router.put('/:id', (req, res) => {
   return res.json(task);
 });
 
+// Issue #4 - Criar endpoint para deletar uma tarefa
+router.delete('/:id', (req, res) => {
+  const removed = store.remove(Number(req.params.id));
+  if (!removed) return res.status(404).json({ error: 'Tarefa não encontrada.' });
+  return res.status(204).send();
+});
+
 module.exports = router;
