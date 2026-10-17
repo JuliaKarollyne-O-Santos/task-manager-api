@@ -13,4 +13,15 @@ router.post('/', (req, res) => {
   return res.status(201).json(task);
 });
 
+// Issue #2 - Criar endpoint para listar tarefas
+router.get('/', (req, res) => {
+  res.json(store.findAll());
+});
+
+router.get('/:id', (req, res) => {
+  const task = store.findById(Number(req.params.id));
+  if (!task) return res.status(404).json({ error: 'Tarefa não encontrada.' });
+  return res.json(task);
+});
+
 module.exports = router;
