@@ -1,0 +1,18 @@
+{
+  "name": "task-manager-api",
+  "version": "1.0.0",
+  "description": "API REST para gerenciamento de tarefas (MVP com CRUD) - projeto acadêmico de gestão ágil e Lean",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "license": "MIT"
+}
