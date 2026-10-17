@@ -24,4 +24,18 @@ router.get('/:id', (req, res) => {
   return res.json(task);
 });
 
+// Issue #3 - Criar endpoint para atualizar uma tarefa
+router.put('/:id', (req, res) => {
+  const { title, description, completed } = req.body || {};
+  if (title !== undefined && (typeof title !== 'string' || !title.trim())) {
+    return res.status(400).json({ error: 'O campo "title" não pode ficar vazio.' });
+  }
+  if (completed !== undefined && typeof completed !== 'boolean') {
+    return res.status(400).json({ error: 'O campo "completed" deve ser true ou false.' });
+  }
+  const task = store.update(Number(req.params.id), { title, description, completed });
+  if (!task) return res.status(404).json({ error: 'Tarefa não encontrada.' });
+  return res.json(task);
+});
+
 module.exports = router;
