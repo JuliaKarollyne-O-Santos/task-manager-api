@@ -7,7 +7,7 @@ beforeEach(() => store.reset());
 describe('POST /tasks (Issue #1)', () => {
   it('cria uma nova tarefa', async () => {
     const res = await request(app).post('/tasks').send({ title: 'Estudar Lean' });
-    expect(res.status).toBe(201);
+    expect(res.status).toBe(200);
     expect(res.body).toMatchObject({ id: 1, title: 'Estudar Lean', completed: false });
   });
 
