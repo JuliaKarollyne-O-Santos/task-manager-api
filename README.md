@@ -58,6 +58,6 @@ Exemplo de corpo para criar uma tarefa:
 ## Integrantes
 
 - Julia Karollyne de Oliveira dos Santos
-- Ana Clara Santos Perira
+- Ana Clara Santos Pereira
 - Cauã Mendrot Sant'Anna
 - Daniel do Prado Bettin
